@@ -48,9 +48,7 @@ function twoSum1(nums, target) {
         }else{
             return [hashmap[diff],i]
         }
-        hashmap
     }
-    hashmap
 }
 
 let x = [5,4,6]
