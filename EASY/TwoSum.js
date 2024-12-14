@@ -38,13 +38,21 @@ function twoSum(nums, target) {
     }
 }
 // more optimal solution one pass
+function twoSum1(nums, target) { 
+    let hashmap = {}
 
+    for (let i = 0; i < nums.length; i++) {
+        let diff =  target - nums[i]
+        if(hashmap[diff] === undefined){
+            hashmap[nums[i]] = i
+        }else{
+            return [hashmap[diff],i]
+        }
+        hashmap
+    }
+    hashmap
+}
 
-
-
-
-
-
-let x = [5,5,4,3,1,2]
+let x = [5,4,6]
 let y = 10
-console.log(twoSum(x,y))
+console.log(twoSum1(x,y))
