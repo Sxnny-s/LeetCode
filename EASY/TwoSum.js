@@ -51,6 +51,19 @@ function twoSum1(nums, target) {
     }
 }
 
+// index of solution 
+function twoSum3(nums, target) { 
+    
+    for (let i = 0; i < nums.length; i++) {
+        let diff =  target - nums[i]
+        let indexDiff = nums.indexOf(diff)
+        if(indexDiff != -1 && indexDiff != i){
+            return [i, indexDiff]
+        }
+    }
+}
+
+
 let x = [5,4,6]
 let y = 10
-console.log(twoSum1(x,y))
+console.log(twoSum3(x,y))

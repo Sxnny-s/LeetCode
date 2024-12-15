@@ -27,3 +27,4 @@
 
   }
 
+console.log(isAnagram('car','jam'))

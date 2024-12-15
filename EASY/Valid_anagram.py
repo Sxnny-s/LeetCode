@@ -18,7 +18,7 @@
 
 # s and t consist of lowercase English letters.
 
-def isAnagram(self, s: str, t: str) -> bool:
+def isAnagram(s: str, t: str) -> bool:
     if len(s) != len(t):
         return False
     countS, countT = {}, {}
@@ -31,7 +31,9 @@ def isAnagram(self, s: str, t: str) -> bool:
         if countS[c] != countT.get(c,0):
             return False
     return True
+    
+    # return sorted(s) == sorted(t)
 
-
+print(isAnagram('car','arc'))
 
 
