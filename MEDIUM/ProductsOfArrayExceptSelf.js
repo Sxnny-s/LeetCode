@@ -20,12 +20,7 @@
 
 function productExceptSelf(nums) {
     let answer = []
-//     for (let i = 0; i < nums.length; i++) {
-//          let arrCopy = nums.slice()
-//          arrCopy.splice(i,1)
-//          answer.push(arrCopy.reduce((acc,cur)=> acc*cur))
-//     }
-//    return answer
+
     let product = nums.reduce((a,c) => a*c)
     nums.forEach((e,i) => {
         if(e === 0){
