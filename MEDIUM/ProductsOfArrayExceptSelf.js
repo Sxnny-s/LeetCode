@@ -18,7 +18,7 @@
 
 // Output: [0,-6,0,0,0]
 
-function productExceptSelf(nums) {
+function productExceptSelf0(nums) {
     let answer = []
 
     let product = nums.reduce((a,c) => a*c)
@@ -35,6 +35,11 @@ function productExceptSelf(nums) {
     return answer
 }
 
+// No division
+function productExceptSelf1(nums) {
+  
+}
+
 const x = [-1,1,0,-3,3]
 // Output: [48,24,12,8]
-console.log(productExceptSelf(x))
+console.log(productExceptSelf1(x))
