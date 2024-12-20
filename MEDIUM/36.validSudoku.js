@@ -59,7 +59,8 @@ function isValidSudoku(board) {
     return true
 }
 
-
+// Time complexity => O(9x3) or O(1) => becasue we are looping through every cell on the board 3 times to chekc rows colums and subgrids
+// space complexity  O(1) => because the cells are constant the space we take up will be constant
 
 
 const x = 
