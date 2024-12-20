@@ -40,5 +40,38 @@ var longestConsecutive = function(nums) {
 // Time complexity => O(nlogn) => because sorting is the bottle neck of out algorthim 
 // Space Complexity => O(n) => because the longer the input array the larger our data structors will be 
 
-const x = [100,4,200,1,3,2]
-console.log(longestConsecutive(x))
+
+var longestConsecutive1 = function(nums) {
+    let maxList = []
+    let maxCount = 1
+    let hashSet = new Set(nums)
+    let uniqueArray = [...hashSet]
+    
+    if(nums.length == 0){
+        return 0
+    }
+   
+    uniqueArray
+    
+    for (let i = 0; i < uniqueArray.length; i++) {
+        if(!hashSet.has(uniqueArray[i] - 1)){
+            i
+            let currentNum = uniqueArray[i]
+            while(hashSet.has(currentNum + 1)){
+                maxCount++
+                currentNum++
+            }
+            maxList.push(maxCount)
+            maxCount = 1
+        }  
+    }
+    maxList
+    return Math.max(...maxList)
+
+    // time complexity => O(n) => because for each element in nums we do same amount of operations 1. creating hasSet form array O(n) 2.looping though each number in the array. checking a hashset takes O(1) time so our overall time is O(n)  
+    // space complexity => 0(n) => because we create maxList array and a hashset form that array. The memory is dependedent on the length of the intial arary 
+    
+};
+
+const x = [9,1,4,7,3,-1,0,5,8,-1,6]
+console.log(longestConsecutive1(x))
