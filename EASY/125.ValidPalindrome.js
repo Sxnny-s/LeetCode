@@ -24,7 +24,9 @@
 var isPalindrome = function(s) {
     
     let words = s.toLowerCase().replace(/[^A-Za-z0-9]+/g, '')
-    return words === words.split('').reverse().join('')     
+    return words === words.split('').reverse().join('')  
+    
+    
 };
 
 const x = "mom"
