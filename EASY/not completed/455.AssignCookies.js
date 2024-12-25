@@ -21,46 +21,7 @@
 // You need to output 2.
 
 var findContentChildren = function(g, s) {
-    // let count = 0
-    // let greedHm = {}
-    // let sizeHm = {}
-    // for(let i = 0; i < g.length; i++){
-    //     greedHm[g[i]] = (greedHm[g[i]] || 0) + 1
-    // }
-    // for(let i = 0; i < s.length; i++){
-    //     sizeHm[s[i]] = (sizeHm[s[i]] || 0) + 1
-    // }
-    // greedHm
-    // sizeHm
-
-    // for(key in greedHm){
-    //     key
-    //     if(sizeHm[key] !== undefined){
-    //         sizeHm[key] - greedHm[key] === 0 ? count += greedHm[key] : sizeHm[key] < greedHm[key] ? count += sizeHm[key]  : count += greedHm[key]
-    //     }
-    // }
-    // return count
-
-     // Step 1: Sort the greed factors and cookie sizes
-     g.sort((a, b) => a - b);
-     s.sort((a, b) => a - b);
- 
-     // Step 2: Initialize pointers and count
-     let i = 0; // pointer for greed factors
-     let j = 0; // pointer for cookie sizes
-     let count = 0;
- 
-     // Step 3: Use two pointers to assign cookies
-     while (j < s.length) {
-         if (s[j] >= g[i]) {
-             // Cookie satisfies the child's greed factor
-             count++;
-             i++; // Move to the next child
-         }
-         j++; // Move to the next cookie (whether it was used or not)
-     }
- 
-     return count;
+    
 };
 
 

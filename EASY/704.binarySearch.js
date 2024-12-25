@@ -43,7 +43,7 @@ var search = function(nums, target) {
     };
     
     
-    const x = [-1,0,3,5,9,12]
-    const y = 100
+    const x = [-1,0,2,4,6,8]
+    const y = 4
     console.log(search(x,y))
     // answer 4
