@@ -16,33 +16,34 @@
 // Explanation: 2 does not exist in nums so return -1
 
 var search = function(nums, target) {
-// left pointer start of array
-// right pointer end of the array 
-// While loop(l<r)
-// mid => (r - l / 2 floor)
-// if(target < mid ) => move right pointer to mid - 1
-// if (target > mid) => move left pointer to mid + 1
-// if (target === mid ) => return target
+    // L pointer === 0
+    // R pointer === nums.length - 1
+    // While(L<=R) =>
+    // mid === L+R/2 floor
+    // is Target > mid => L === mid + 1
+    // is target < mid => R === Mid - 1
+    // else => return mid
+    // return - 1
+
     let l = 0
     let r = nums.length - 1
-   
-    while(l <= r){
-        let mid = Math.floor((r+l)/2)
 
-      if(target < nums[mid]){
-        r = mid - 1
-      }else if(target > nums[mid]){
-        l = mid + 1
-      }else{
-        return mid
+    while(l<=r){
+        let mid = Math.floor((l+r) / 2)
+
+        if(target > nums[mid]){
+            l = mid + 1
+        }else if(target < nums[mid]){
+            r = mid - 1
+        }else {
+            return mid
         }
-
     }
     return -1
-};
-
-
-const x = [-1,0,3,5,9,12]
-const y = 9
-console.log(search(x,y))
-// answer 4
+    };
+    
+    
+    const x = [-1,0,3,5,9,12]
+    const y = 100
+    console.log(search(x,y))
+    // answer 4
