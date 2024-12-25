@@ -31,5 +31,29 @@ var maxProfit = function(prices) {
 };
 // Time complexity => O(n^2)
 // Space complexity => O(1)
+
+
+// Two pointer 
+var maxProfit1 = function(prices) {
+    let max = 0
+    let r = 1
+    let l = 0
+
+    while(r < prices.length){
+        let profit = prices[r] - prices[l]
+        profit > max ? max = profit : max
+       
+        if(prices[l] > prices[r]){
+            l++
+        }else if(prices[l] <= prices[r]){
+            r++
+        }
+    }
+    return max
+};
+
+// Time coplexity => O(n)
+// space  Complexity  => O(1)
+
 const x = [7,1,5,3,6,4]
-console.log(maxProfit(x))
+console.log(maxProfit1(x))
