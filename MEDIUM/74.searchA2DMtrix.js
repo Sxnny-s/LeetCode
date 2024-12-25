@@ -7,8 +7,6 @@
 
 // You must write a solution in O(log(m * n)) time complexity.
 
- 
-
 // Example 1:
 
 // Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3
@@ -19,9 +17,7 @@
 // Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13
 // Output: false
 
-
-
-
+// faltening the array 
 var searchMatrix = function(matrix, target) {
     let flatArr = matrix.flat()
     let l = 0
@@ -37,14 +33,29 @@ var searchMatrix = function(matrix, target) {
             return true
         }
     }
-
     return false
+};
+
+var searchMatrix1 = function(matrix, target) {
+    matrix
+    // l pointer first element of the first array
+    // R pointer last element of the last array 
+    // While(l<=R)
+    // find mid array in matrix (l+R) / 2 floor
+    // if target < mid[0] r = mid - 1
+    // if target > mid[mid.length - 1] => l = mid + 1
+    // else => return target 
+
+
+
+    
+    
 };
 
 
 const x = [[1,3,5,7],[10,11,16,20],[23,30,34,60]]
 const y = 7
 
-console.log(searchMatrix(x,y))
+console.log(searchMatrix1(x,y))
 
 
