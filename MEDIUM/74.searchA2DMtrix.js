@@ -46,9 +46,12 @@ var searchMatrix1 = function(matrix, target) {
     // if target > mid[mid.length - 1] => l = mid + 1
     // else => return target 
 
-
-
+    let l = 0
+    let r = matrix.length - 1
     
+    
+
+
     
 };
 
