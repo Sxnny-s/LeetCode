@@ -23,26 +23,23 @@ var dailyTemperatures = function(temperatures) {
     // deconstruct the stack inded stack index = stack.pop()
     // if temp[i] > stack[temp] => output[stackInd] = i - stackInd 
 
+   
     let output = new Array(temperatures.length).fill(0)
-    let stack = [] // [temp, index]
+    let stack = [] // temp , index
 
-    for(let i = 0; i < temperatures.length; i++){
-        let temp = temperatures[i]
-        
-        while(stack.length > 0 && temp > stack[stack.length - 1][0]){
+    for(let i = 0; i < temperatures.length;i++){
+       let temp = temperatures[i]
+       i
+       while(stack.length > 0 && temp > stack[stack.length - 1][0]){
             const [stackTemp, stackIndex] = stack.pop()
             output[stackIndex] = i - stackIndex
-        }
-
-        stack.push([temp,i])
-        console.log(stack)
+       }
+       stack.push([temp,i])
+       
     }
-
-    return output
-
-  
+       return output
 };
 
-const x = [73,74,75,71,69,72,76,73]
+const x = [30,30,30,29,30,]
 // Output: [1,1,4,2,1,1,0,0]
 console.log(dailyTemperatures(x))
