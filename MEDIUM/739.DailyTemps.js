@@ -25,11 +25,11 @@ var dailyTemperatures = function(temperatures) {
 
    
     let output = new Array(temperatures.length).fill(0)
+    output
     let stack = [] // temp , index
 
     for(let i = 0; i < temperatures.length;i++){
        let temp = temperatures[i]
-       i
        while(stack.length > 0 && temp > stack[stack.length - 1][0]){
             const [stackTemp, stackIndex] = stack.pop()
             output[stackIndex] = i - stackIndex
@@ -40,6 +40,6 @@ var dailyTemperatures = function(temperatures) {
        return output
 };
 
-const x = [30,30,30,29,30,]
-// Output: [1,1,4,2,1,1,0,0]
+const x = [31,30,30,29,34,]
+
 console.log(dailyTemperatures(x))

@@ -21,41 +21,38 @@
 // Input: nums = [1], target = 0
 // Output: -1
 
+// [1,2,3] => [3,1,2] => [2,3,1] => [1,2,3]
+
 var search = function(nums, target) {
     let l = 0
-    let r = nums.length - 1
-    
-    while(l <= r){
-        let mid = Math.floor((l+r) / 2)
-       
-        if (nums[mid] === target) {
-            return mid;
-        }
+    let r = nums.length - 1;
 
-        if (nums[l] <= nums[mid]) {
-            if (nums[l] <= target && target < nums[mid]) {
-                r = mid - 1;
-            } else {
-                l = mid + 1;
-            }
-        } else {
-            // Right side is sorted
-            if (nums[mid] < target && target <= nums[r]) {
-                l = mid + 1;
-            } else {
-                r = mid - 1;
-            }
-        }
-       
-        
+   while(l<=r){
+    let m = Math.floor((l+r)/2)
+
+    if(nums[m] === target){
+        return m
     }
 
-    return -1
-
+    if(nums[l] <= nums[m]){
+        if(target > nums[m] || target < nums[l]){
+            l = m + 1
+        }else{
+            r = m - 1
+        }
+    }else{
+        if(target < nums[m] || target > nums[r]){
+            r = m - 1
+        }else{
+            l = m + 1
+        }
+    }
+}
+return - 1
 }
 
 
-const x = [3,1]
-const y = 0
-// answer => 0 
+const x = [4,5,6,7,0,1,2]
+const y = 4
 console.log(search(x,y))
+// answer => 4

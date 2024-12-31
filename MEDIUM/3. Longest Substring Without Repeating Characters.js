@@ -23,23 +23,47 @@
 
 
 var lengthOfLongestSubstring = function(s) {
-    let l = 0
-    let long = 0
+   
+    let max = 0
+    let r = 0
+    for(let i = 1 ; i < s.length ;i++){
+        let subString = []
+        while(!subString.includes(s[r]) && s[r]){
+            subString.push(s[r])
+            r++
+        }
+        r = i
+        subString
+       if(subString.length > max) max = subString.length
+    }
+    return max
+};
+// Time complexity is O(n^2)
 
-    for(let r = 0; r < s.length; r++ ){
-        let possibleLong = []
-        while(!possibleLong.includes(s[l]) && s[l] !== undefined){
-            possibleLong.push(s[l])
+
+var lengthOfLongestSubstring1 = function(s) {
+    let long = 0
+    let l = 0
+    let unique = new Set()
+
+    for (let r = 0; r < s.length; r++){
+       
+        while(unique.has(s[r])){
+            unique.delete(s[l])
             l++
         }
-        l = r
-        if(possibleLong.length > long){
-            long = possibleLong.length
-        }
+        unique.add(s[r])
+        long = Math.max(long, unique.size)
     }
     return long
+    
 };
 
 
-const x = "dvdf"
-console.log(lengthOfLongestSubstring(x))
+
+
+
+
+const x = "aaaaaaaaaab"
+// answer => 1 = vdf
+console.log(lengthOfLongestSubstring1(x))
