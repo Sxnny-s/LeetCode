@@ -12,35 +12,30 @@ The repository is organized by difficulty levels and includes subfolders for com
 
 LeetCode-Solutions/
 ├── easy/
-│   ├── solutions/
+│   ├── completed/
 │   │   ├── problem-name/
 │   │   │   ├── solution.js
 │   │   │   └── time-space-complexity.md
-│   │   └── ...
-│   └── not-completed/
-│       ├── problem-name/
-│       │   └── notes.md
-│       └── ...
+│   ├── not-completed/
+│   │   └── problem-name/
+│   │       └── notes.md
 ├── medium/
-│   ├── solutions/
+│   ├── completed/
 │   │   ├── problem-name/
 │   │   │   ├── solution.js
 │   │   │   └── time-space-complexity.md
-│   │   └── ...
-│   └── not-completed/
-│       ├── problem-name/
-│       │   └── notes.md
-│       └── ...
+│   ├── not-completed/
+│   │   └── problem-name/
+│   │       └── notes.md
 ├── hard/
-│   ├── solutions/
+│   ├── completed/
 │   │   ├── problem-name/
 │   │   │   ├── solution.js
 │   │   │   └── time-space-complexity.md
-│   │   └── ...
-│   └── not-completed/
-│       ├── problem-name/
-│       │   └── notes.md
-│       └── ...
+│   ├── not-completed/
+│   │   └── problem-name/
+│   │       └── notes.md
+
 
 📘 Topics Covered
 
