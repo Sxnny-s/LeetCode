@@ -1,5 +1,3 @@
-LeetCode Solutions Repository
-
 Welcome to my LeetCode Solutions repository! 🚀 Here, you'll find my journey solving algorithmic challenges and honing my problem-solving skills. This repository is a testament to my growth as a developer, featuring solutions written primarily in JavaScript.
 
 About
@@ -10,11 +8,12 @@ Repository Structure
 
 The repository is organized into folders based on difficulty level and review status:
 
-|-- easy/
-|-- medium/
-|-- hard/
-|-- review/
-|-- not-completed/
+leetcode-solutions/
+├── easy/
+├── medium/
+├── hard/
+├── review/
+└── not-completed/
 
 Folder Details
 
