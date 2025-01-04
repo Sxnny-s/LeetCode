@@ -1,37 +1,48 @@
-Welcome to my LeetCode Solutions repository! 🚀 Here, you'll find my journey solving algorithmic challenges and honing my problem-solving skills. This repository is a testament to my growth as a developer, featuring solutions written primarily in JavaScript.
+LeetCode Solutions
 
-About
+Welcome to my LeetCode Solutions repository! 🚀 This is where I document my journey solving various algorithmic challenges on LeetCode. Each solution showcases my problem-solving skills and growth as a developer, with a focus on JavaScript.
 
-I started solving LeetCode problems to strengthen my coding skills, particularly in data structures and algorithms. As of now, I have completed 50 problems in 19 days and continue to push myself daily.
+🛠️ Languages Used
 
-Repository Structure
+JavaScript (primary focus)
 
-The repository is organized into folders based on difficulty level and review status:
+📂 Repository Structure
 
-leetcode-solutions/
+The repository is organized by difficulty levels and includes subfolders for completed and not-completed solutions:
+
+LeetCode-Solutions/
 ├── easy/
+│   ├── solutions/
+│   │   ├── problem-name/
+│   │   │   ├── solution.js
+│   │   │   └── time-space-complexity.md
+│   │   └── ...
+│   └── not-completed/
+│       ├── problem-name/
+│       │   └── notes.md
+│       └── ...
 ├── medium/
+│   ├── solutions/
+│   │   ├── problem-name/
+│   │   │   ├── solution.js
+│   │   │   └── time-space-complexity.md
+│   │   └── ...
+│   └── not-completed/
+│       ├── problem-name/
+│       │   └── notes.md
+│       └── ...
 ├── hard/
-├── review/
-└── not-completed/
+│   ├── solutions/
+│   │   ├── problem-name/
+│   │   │   ├── solution.js
+│   │   │   └── time-space-complexity.md
+│   │   └── ...
+│   └── not-completed/
+│       ├── problem-name/
+│       │   └── notes.md
+│       └── ...
 
-Folder Details
-
-easy/, medium/, hard/: Contain problems I have solved, organized by difficulty level.
-
-review/: Contains problems I want to revisit for further practice.
-
-not-completed/: Contains problems I got stuck on and have yet to solve.
-
-Problem Structure
-
-Each problem folder includes:
-
-solution.js: My JavaScript solution to the problem.
-
-time-space-complexity.md: A markdown file detailing the time and space complexity of the solution.
-
-Topics Covered
+📘 Topics Covered
 
 Here are some of the topics I’ve worked on so far:
 
@@ -48,3 +59,11 @@ Recursion
 Dynamic Programming
 
 Sorting and Searching
+
+🚀 Goals
+
+Solve 100 problems in the next month.
+
+Dive deeper into graph algorithms and dynamic programming.
+
+Continuously optimize solutions for better performance.
