@@ -27,7 +27,6 @@ var finalPrices = function(prices) {
     let res = prices.slice()
     let stack = [] // [price,index]
     for(let i = 0; i < prices.length; i++){
-
             while(stack.length > 0 && prices[i] <= stack[stack.length - 1][0]){
                 let [sPrice,sIndex] = stack.pop()
                 res[sIndex] = sPrice - prices[i]
