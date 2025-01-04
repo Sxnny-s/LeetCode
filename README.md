@@ -10,6 +10,7 @@ JavaScript (primary focus)
 
 The repository is organized by difficulty levels and includes subfolders for completed and not-completed solutions:
 
+```plaintext
 LeetCode-Solutions/
 ├── easy/
 │   ├── completed/
