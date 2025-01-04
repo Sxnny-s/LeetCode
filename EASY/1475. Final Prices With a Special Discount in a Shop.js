@@ -18,10 +18,27 @@
 
 
 var finalPrices = function(prices) {
-    
+    // create a copy of prices = res
+    // init stack => [price, index]
+    // add elemnts on our stack => element < stack
+    // if true => top stack[0] - element = discount 
+    // set res[stack[1]] = discount 
+
+    let res = prices.slice()
+    let stack = [] // [price,index]
+    for(let i = 0; i < prices.length; i++){
+
+            while(stack.length > 0 && prices[i] <= stack[stack.length - 1][0]){
+                let [sPrice,sIndex] = stack.pop()
+                res[sIndex] = sPrice - prices[i]
+            }
+        stack.push([prices[i],i])
+    }
+    return res
+    // Time complexity => O(n) (one pass)
+    // space coplexity => O(n)
 };
 
-
-
-
-co
+const x = [10,1,1,6]
+// answer => [4,2,4,2,3]
+console.log(finalPrices(x))
