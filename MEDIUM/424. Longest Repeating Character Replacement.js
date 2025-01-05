@@ -19,8 +19,7 @@
  
 
 var characterReplacement = function(s, k) {
-    s
-    k
+    
     // 1.Two pointers l and r => slideing window (start at 0)
     // 2. We calculate the most common occurence of each letter in the window
     // 3. window length - most common <= k if so we have enough replacements to fill the wondow 
@@ -28,18 +27,6 @@ var characterReplacement = function(s, k) {
     // 5. if not move the left pointer up  
     // 6. return max
 
-    let l = 0
-    let longest = 0
-    let word = []
-    
-    for(let r = 0; r < s.length; r++){
-        r
-        
-        while(){
-            
-        }
-        word.push(s[r])
-    }
 };
 
 

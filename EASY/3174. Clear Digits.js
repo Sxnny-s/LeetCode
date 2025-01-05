@@ -31,22 +31,23 @@
 
 
 var clearDigits = function(s) {
-    let stack = []
-    for(let i =  0; i < s.length; i++){
-        let l = s[i]
-        if(typeof l === 'number'){
-            stack.pop()
-            continue
-        }
-        stack.push(l)
+  let stack = []
+  for(let i = 0; i < s.length;i++){
+    let e = s[i]
+
+    if(e <= 9){
+        stack.pop()
+        continue
     }
-    return stack.join('')
+    stack.push(e)
+  }
+
+  return stack.join('') 
+
 };
-// Time comlexity => O(n)
-// space complexity => O(n)
+
 
 
 const x = "cb34"
-''
 console.log(clearDigits(x))
 
