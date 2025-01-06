@@ -38,11 +38,12 @@ var maxSlidingWindow = function(nums, k) {
     let l = 0
     let r = k
    
-    for(let i = k - 1; i < nums.length;i++){
-        let sect = nums.slice(l,k)
-        answer.push(Math.max(...sect))
-        k++
-        l++
+    for(let i = 0; i < nums.length;i++){
+     let num = nums[i]
+        if(i % k === 0){
+
+        }
+     num
     }   
 
     answer
