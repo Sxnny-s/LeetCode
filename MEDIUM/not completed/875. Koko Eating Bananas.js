@@ -45,7 +45,11 @@ var minEatingSpeed = function(piles, h) {
 
 
 
+
 const x = [3,6,7,11]
 const y = 8
 // Output: 4
-console.log(minEatingSpeed(x,y))
+console.log(minEatingSpeed1(x,y))
+
+
+

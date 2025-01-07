@@ -46,6 +46,8 @@ var clearDigits = function(s) {
 
 };
 
+// time complexity => O(n)
+// sapce complexity  => O(n)
 
 
 const x = "cb34"

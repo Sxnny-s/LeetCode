@@ -25,29 +25,17 @@
 // Explanation: Alice can only eat 4 / 2 = 2 candies. Even though she can eat 2 candies, she only has 1 type.
 
 
-// First solution 
-var distributeCandies = function(candyType) {
-    count = 0
-    let n = candyType.length / 2 
-    let candySet = new Set(candyType)
-    
-    candySet.forEach((e)=> {
-        if(count < n){
-            count++
-        }
-    })
-    return count
-};
 
-// Second solution
 var distributeCandies1 = function(candyType) {
-    let n = candyType.length / 2
-    let candySet = new Set(candyType)
-    return Math.min(candySet.size,n)
+ let max = candyType.length / 2
+ let unique = new Set(candyType)
+ return Math.min(max,unique.size)
+ 
+   
 };
 
-// Time complexity => O(n)
-// space complexity => O(n)
+// Time complexity => 
+// space complexity => 
 
-const x = [6,6,6,6]
+const x = [1,1,2,2,3,3]
 console.log(distributeCandies1(x))
