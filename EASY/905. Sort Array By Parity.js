@@ -40,3 +40,5 @@ var sortArrayByParity = function(nums) {
 
 const x = [3,3,3,3]
 console.log(sortArrayByParity(x))
+
+
