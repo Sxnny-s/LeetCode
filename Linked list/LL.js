@@ -121,24 +121,31 @@ class LinkedList {
 
     // print list data
     printListData(){
+        let res = ''
        let current = this.head;
        while(current){
         console.log(current.data)
+        res += `${current.data} -> `
         current = current.next
        } 
+       return res
+
     }
 
 }
 
 
 const ll = new LinkedList();
+const  ll2 = new LinkedList()
+
+ll.insertFirst(1)
+ll.insertFirst(1)
+
+console.log(ll.printListData())
 
 
-ll.insertFirst(100)
-ll.insertFirst(200)
-ll.insertFirst(300)
-ll.insertLast(400)
-ll.insertAt(500,1)
-ll.removeAt(3)
-ll.clearList()
-ll.printListData()
+ll2.insertFirst(1)
+ll2.insertLast(3)
+ll2.insertLast(4)
+
+console.log(ll2.printListData())
