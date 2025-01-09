@@ -35,7 +35,7 @@ class linkedList{
     insertAt(val,index){
         if(index <= 0){
             this.insertFirst(val)
-        }else if(index === this.size){
+        }else if(index > this.size){
             this.insertLast(val)
         }else{
             let prev
@@ -106,24 +106,14 @@ class linkedList{
         res
         return res
     }
-    // reverse
-    reverse() {
-        let prev = null;
-        let cur = this.head;
-        while (cur) {
-            let next = cur.next;
-            cur.next = prev;
-            prev = cur;
-            cur = next;
-        }
-        this.head = prev;
-    }
+  
     
 }
 
 
 let ll = new linkedList()
 let i = 0
+
 while(i < 20){
     ll.insertLast(i)
     i++
@@ -131,7 +121,9 @@ while(i < 20){
 
 
 
-
+ll.insertAt(20,99)
+ll.insertAt(21,99)
+ll.insertAt(22,99)
 console.log(ll.print())
 
 console.log(ll.getSize())
