@@ -39,6 +39,7 @@ var findJudge = function(n, trust) {
     }
    
 
+
     for (key in tm){
        if (tm[key] === j){
         return Number(key)
