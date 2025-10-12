@@ -48,6 +48,7 @@ var searchMatrix1 = function(matrix, target) {
 
     let l = 0
     let r = matrix.length - 1
+<<<<<<< HEAD
 
     while(l<=r){
         let mid = Math.floor((l+r) / 2)
@@ -75,6 +76,13 @@ var searchMatrix1 = function(matrix, target) {
         
     }
     return false
+=======
+    
+    
+
+
+    
+>>>>>>> 007401eb652581a1526cc52887dbf16533f08429
 };
 
 const x = [[1,3,5,7],[10,11,16,20],[23,30,34,60]]
