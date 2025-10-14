@@ -2,27 +2,30 @@ class Solution:
     def isValid(self, s: str) -> bool:
         
 
-        stack = []
+        class Solution:
+            def isValid(self, s: str) -> bool:
 
-        key = {
-            ")":'(',
-            "}":'{',
-            "]":'['
-        }
+                stack = []
+
+                key = {
+                    ")":'(',
+                    "}":'{',
+                    "]":'['
+                }
         
-        for c in s:
+                for c in s:
 
-            if c in '[({':
-                stack.append(c)
+                    if c in '[({':
+                        stack.append(c)
 
-            if c in '])}':
+                    if c in '])}':
 
-                if not stack: return False
+                        if not stack: return False
 
-                if stack and stack[-1] == key[c]:
-                    stack.pop()
-                else: return False
+                        if stack and stack[-1] == key[c]:
+                            stack.pop()
+                        else: return False
 
 
 
-        return len(stack) == 0
+                return len(stack) == 0
