@@ -1,0 +1,19 @@
+class Solution:
+    def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
+        
+        stack = [] # [temp,idx]
+        res = [0] * len(temperatures)
+
+        for i in range(len(temperatures)):
+            
+            temp = temperatures[i]
+            
+                
+            while stack and stack[-1][0] < temp:
+                Stack_temp, Stack_idx = stack.pop()
+                res[Stack_idx] = i - Stack_idx
+
+            stack.append([temp,i])
+
+
+        return res
