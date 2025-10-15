@@ -1,10 +1,55 @@
 class Node {
+<<<<<<< HEAD
+    constructor(val,next = null){
+        this.val = val 
+=======
     constructor(data,next = null){
         this.data = data;
+>>>>>>> 757d95ffc97e0bf19004cd32c5030c1810a0c9a5
         this.next = next
     }
 }
 
+<<<<<<< HEAD
+class linkedList{
+   constructor(){
+     this.head = null
+     this.size = 0
+   }
+
+   // insert at start
+   insertStart(val){
+    let node = new Node(val,this.head)
+    this.head = node
+    this.size++
+
+   }
+
+    // insert at end 
+
+    insertEnd(val){
+        let cur = this.head
+        while(cur.next){
+            cur = cur.next
+        }
+        let node = new Node(val)
+        cur.next = node
+        this.size++
+    }
+    
+    
+
+    // get val
+    getVal(index){
+        let cur = this.head
+        let count = 0
+        while(count < index){
+            cur = cur.next
+            count++
+        }
+
+        return cur.val
+=======
 class LinkedList {
     constructor(){
         this.head = null;
@@ -65,10 +110,60 @@ class LinkedList {
         previous.next = node
         
         this.size++
+>>>>>>> 757d95ffc97e0bf19004cd32c5030c1810a0c9a5
 
     }
 
 
+<<<<<<< HEAD
+
+    //insert at index
+    insertAt(index,val){
+        let cur = this.head
+        let prev 
+        let count = 0
+        while(count < index){
+            prev = cur
+            cur = cur.next
+            count++
+        }
+        
+        let node = new Node(val)
+        prev.next = node
+        node.next = cur
+        
+    }
+
+
+
+    //rm at index
+
+
+    //reverse list 
+
+
+    //print list
+    print(){
+        let cur = this.head
+        let res = ''
+        while(cur){
+            res += `${cur.val} -> `
+            cur = cur.next
+        }
+        res += ' null'
+        res
+        return res
+    }
+}
+
+const ll = new linkedList()
+ll.insertStart(200)
+ll.insertStart(100)
+ll.insertEnd(300)
+console.log(ll.getVal(0))
+ll.insertAt(1,0) 
+ll.print()
+=======
     // get at index
     getAt(index){
        let  current = this.head
@@ -149,3 +244,4 @@ ll2.insertLast(3)
 ll2.insertLast(4)
 
 console.log(ll2.printListData())
+>>>>>>> 757d95ffc97e0bf19004cd32c5030c1810a0c9a5

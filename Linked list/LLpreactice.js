@@ -129,7 +129,11 @@ class linkedList{
 let ll = new linkedList()
 let i = 0
 
+<<<<<<< HEAD
+while(i < 10){
+=======
 while(i < 5){
+>>>>>>> 757d95ffc97e0bf19004cd32c5030c1810a0c9a5
     ll.insertLast(i)
     i++
 }
