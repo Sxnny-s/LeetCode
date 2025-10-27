@@ -1,0 +1,44 @@
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     constructor(val = 0, next = null) {
+ *         this.val = val;
+ *         this.next = next;
+ *     }
+ * }
+ */
+
+class Solution {
+    /**
+     * @param {ListNode} head
+     * @param {number} n
+     * @return {ListNode}
+     */
+    removeNthFromEnd(head, n) {
+        let count = 0
+        let cur = head
+        while(cur){
+            cur = cur.next
+            count++
+        }
+        let target = count - n
+        count = 0
+        cur = head
+        let prev = head
+        // let prev = new ListNode(0,head)
+        // let newHead = prev
+
+       if(target === 0 ) return head.next
+        while(cur){
+            if(count === target){
+                prev.next = cur.next
+            }
+            prev = cur
+            cur = cur.next
+            count++
+        }
+
+        return head
+
+    }
+}
